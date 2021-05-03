@@ -4,4 +4,5 @@
 
 | Table of Contents | path |
 | ---- | ---- |
-| arrayReverse | [click here](challenges/challenges/readme.md) |
+| arrayReverse | [click here](challenges/arrayReverse/readme.md) |
+| arrayReverse | [click here](challenges/arrayShift/readme.md) |
