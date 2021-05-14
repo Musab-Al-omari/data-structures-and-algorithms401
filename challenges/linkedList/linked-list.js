@@ -45,12 +45,16 @@ class linkedList {
   }
   includes(value) {
     let theCurrentNode = this.head
+
     while (theCurrentNode) {
+      console.log('sadbhasdbj . value', theCurrentNode.value);
+      console.log(' value', value);
       if (theCurrentNode.value = value) {
         return true
       }
       theCurrentNode = theCurrentNode.next
     }
+    console.log('hello');
     return false
   }
 

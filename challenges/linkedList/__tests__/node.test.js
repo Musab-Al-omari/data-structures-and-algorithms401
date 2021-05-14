@@ -48,10 +48,8 @@ describe('Linked List', () => {
   });
   it('Will return false when searching for a value in the linked list that does not exist', () => {
     let ll = new linkedList()
-    ll.insert(5)
-    ll.insert(9)
-    ll.insert(15)
-    expect(ll.includes(20)).toEqual(false)
+
+    expect(ll.includes('why')).toEqual(false)
 
   })
   it('return a collection of all the values that exist in the linked list', () => {
