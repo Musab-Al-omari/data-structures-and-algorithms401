@@ -11,8 +11,8 @@ describe('Linked List', () => {
 
   it('Can properly insert into the linked list', () => {
     let ll = new linkedList()
-    ll.insert(5)
-    ll.insert(9)
+    ll.append(5)
+    ll.append(9)
     expect(ll.head.value).toEqual(5)
     expect(ll.head.next.value).toEqual(9)
 
@@ -20,18 +20,18 @@ describe('Linked List', () => {
   });
   it('The head property will properly point to the first node in the linked list', () => {
     let ll = new linkedList()
-    ll.insert('first')
-    ll.insert('second')
+    ll.append('first')
+    ll.append('second')
     console.log(ll.head);
     expect(ll.head.value).toEqual('first')
     expect(ll.head.next).toEqual({ value: 'second', next: null })
 
   });
-  it('Can properly insert multiple nodes into the linked list', () => {
+  it('Can properly append multiple nodes into the linked list', () => {
     let ll = new linkedList()
-    ll.insert(5)
-    ll.insert(9)
-    ll.insert(15)
+    ll.append(5)
+    ll.append(9)
+    ll.append(15)
     expect(ll.head.value).toEqual(5)
     expect(ll.head.next.value).toEqual(9)
     expect(ll.head.next.next.value).toEqual(15)
@@ -39,9 +39,9 @@ describe('Linked List', () => {
   });
   it('Will return true when finding a value within the linked list that exists', () => {
     let ll = new linkedList()
-    ll.insert(5)
-    ll.insert(9)
-    ll.insert(15)
+    ll.append(5)
+    ll.append(9)
+    ll.append(15)
     expect(ll.includes(15)).toEqual(true)
 
 
@@ -54,9 +54,9 @@ describe('Linked List', () => {
   })
   it('return a collection of all the values that exist in the linked list', () => {
     let ll = new linkedList()
-    ll.insert('a')
-    ll.insert('b')
-    ll.insert('c')
+    ll.append('a')
+    ll.append('b')
+    ll.append('c')
     expect(ll.toString()).toEqual('{a}->{b}->{c}->{null}');
   });
 })

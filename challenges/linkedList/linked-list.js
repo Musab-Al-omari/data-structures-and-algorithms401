@@ -29,7 +29,7 @@ class linkedList {
 
   //     }
   //   }
-  insert(value) {
+  append(value) {
     let node = new Node(value);
     if (!this.head) {
       this.head = node;
@@ -43,6 +43,30 @@ class linkedList {
     theCurrentNode.next = node
     return this
   }
+
+  insert(value) {
+    let newNode = new Node(value);
+    newNode.next = this.head;
+    this.head = newNode;
+    return this.head;
+  }
+
+  insertAfter(value, newVal) {
+
+    let nodes = this.head
+    while (nodes != null) {
+      if (nodes.value === value) {
+        let newNode = new Node(newVal);
+        newNode.next = nodes.next
+        nodes.next = newNode
+        return;
+
+      }
+      nodes = nodes.next
+    }
+  }
+
+
   includes(value) {
     let theCurrentNode = this.head
 
@@ -75,5 +99,10 @@ class linkedList {
       // console.log(valueString)
     return valueString
   }
+
+
+
+
+
 }
 module.exports = linkedList
