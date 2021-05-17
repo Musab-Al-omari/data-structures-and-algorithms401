@@ -10,7 +10,7 @@ class Node {
 
 class linkedList {
   constructor() {
-    this.head = null
+    this.head = null;
   }
 
   //   append(value) {
@@ -29,7 +29,7 @@ class linkedList {
 
   //     }
   //   }
-  insert(value) {
+  append(value) {
     let node = new Node(value);
     if (!this.head) {
       this.head = node;
@@ -43,10 +43,66 @@ class linkedList {
     theCurrentNode.next = node
     return this
   }
+
+  insert(value) {
+    let newNode = new Node(value);
+    newNode.next = this.head;
+    this.head = newNode;
+    return this.head;
+  }
+
+  insertAfter(value, newVal) {
+    let currentNode = this.head
+    while (currentNode != null) {
+      if (currentNode.value === value) {
+        let newNode = new Node(newVal);
+        newNode.next = currentNode.next
+        currentNode.next = newNode
+        return;
+      }
+      currentNode = currentNode.next
+    }
+  }
+
+  insertBefore(value, newVal) {
+
+    let currentNode = this.head
+
+    while (currentNode.value) {
+      // case 1 if the value === head node 
+      if (currentNode.value === value) {
+        let newNode = new Node(value);
+
+        currentNode.value = newVal
+
+        newNode.next = currentNode.next;
+
+        currentNode.next = newNode;
+        return;
+      }
+      // case 2 if the value === any else node 
+      if (currentNode.next.value === value) {
+        let newNode = new Node(newVal);
+
+        newNode.next = currentNode.next;
+
+        currentNode.next = newNode;
+        return;
+      }
+      currentNode = currentNode.next
+
+    }
+  }
+
+
+
+
+
   includes(value) {
     let theCurrentNode = this.head
+
     while (theCurrentNode) {
-      if (theCurrentNode.value = value) {
+      if (theCurrentNode.value === value) {
         return true
       }
       theCurrentNode = theCurrentNode.next
@@ -71,5 +127,9 @@ class linkedList {
       // console.log(valueString)
     return valueString
   }
+
+
+
+
 }
 module.exports = linkedList
