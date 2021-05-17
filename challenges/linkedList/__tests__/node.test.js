@@ -59,4 +59,16 @@ describe('Linked List', () => {
     ll.append('c')
     expect(ll.toString()).toEqual('{a}->{b}->{c}->{null}');
   });
+  it('insert before a given value ', () => {
+    let ll = new linkedList()
+    ll.append('a')
+    ll.append('b')
+    ll.append('c')
+    ll.insertBefore('a', 'z')
+    ll.insertAfter('c', 'z')
+
+    expect(ll.toString()).toEqual('{z}->{a}->{b}->{c}->{z}->{null}')
+
+
+  })
 })

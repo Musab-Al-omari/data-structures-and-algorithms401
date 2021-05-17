@@ -10,7 +10,7 @@ class Node {
 
 class linkedList {
   constructor() {
-    this.head = null
+    this.head = null;
   }
 
   //   append(value) {
@@ -52,33 +52,61 @@ class linkedList {
   }
 
   insertAfter(value, newVal) {
-
-    let nodes = this.head
-    while (nodes != null) {
-      if (nodes.value === value) {
+    let currentNode = this.head
+    while (currentNode != null) {
+      if (currentNode.value === value) {
         let newNode = new Node(newVal);
-        newNode.next = nodes.next
-        nodes.next = newNode
+        newNode.next = currentNode.next
+        currentNode.next = newNode
         return;
-
       }
-      nodes = nodes.next
+      currentNode = currentNode.next
     }
   }
+
+  insertBefore(value, newVal) {
+
+    let currentNode = this.head
+
+    while (currentNode.value) {
+      // case 1 if the value === head node 
+      if (currentNode.value === value) {
+        let newNode = new Node(value);
+
+        currentNode.value = newVal
+
+        newNode.next = currentNode.next;
+
+        currentNode.next = newNode;
+        return;
+      }
+      // case 2 if the value === any else node 
+      if (currentNode.next.value === value) {
+        let newNode = new Node(newVal);
+
+        newNode.next = currentNode.next;
+
+        currentNode.next = newNode;
+        return;
+      }
+      currentNode = currentNode.next
+
+    }
+  }
+
+
+
 
 
   includes(value) {
     let theCurrentNode = this.head
 
     while (theCurrentNode) {
-      console.log('sadbhasdbj . value', theCurrentNode.value);
-      console.log(' value', value);
-      if (theCurrentNode.value = value) {
+      if (theCurrentNode.value === value) {
         return true
       }
       theCurrentNode = theCurrentNode.next
     }
-    console.log('hello');
     return false
   }
 
@@ -99,7 +127,6 @@ class linkedList {
       // console.log(valueString)
     return valueString
   }
-
 
 
 
