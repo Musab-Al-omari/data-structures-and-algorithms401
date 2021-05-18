@@ -63,6 +63,14 @@ class linkedList {
       currentNode = currentNode.next
     }
   }
+  print() {
+    let currentNode = this.head
+    while (currentNode) {
+      console.log(currentNode.value);
+      currentNode = currentNode.next
+    }
+  }
+
 
   insertBefore(value, newVal) {
 
@@ -127,9 +135,37 @@ class linkedList {
       // console.log(valueString)
     return valueString
   }
+  kthFromEnd(k) {
+    let currentNode = this.head
+    let arr = []
+    while (currentNode) {
 
+      arr.push(currentNode.value)
+      currentNode = currentNode.next
+    }
+    // console.log(arr);
+    let x = arr.length - 1 - k
+    if (k <= arr.length - 1) {
+      // console.log(arr[x]);
+      return arr[x]
+    } else {
+      return 'Exception'
+    }
 
-
+  }
 
 }
+let ll = new linkedList()
+ll.append('a')
+ll.append('b')
+ll.append('c')
+console.log(ll.kthFromEnd(2));
+// ll.print()
+
+
+
+
+
+
+
 module.exports = linkedList
