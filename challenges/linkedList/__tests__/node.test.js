@@ -66,9 +66,23 @@ describe('Linked List', () => {
     ll.append('c')
     ll.insertBefore('a', 'z')
     ll.insertAfter('c', 'z')
-
     expect(ll.toString()).toEqual('{z}->{a}->{b}->{c}->{z}->{null}')
+  })
 
+
+  it('k-th value from the end of a linked list. all test done in one it ', () => {
+    let ll = new linkedList()
+    ll.append('a')
+    ll.append('b')
+    ll.append('c')
+    expect(ll.kthFromEnd(0)).toEqual('c')
+    expect(ll.kthFromEnd(1)).toEqual('b')
+    expect(ll.kthFromEnd(2)).toEqual('a')
+    expect(ll.kthFromEnd(3)).toEqual('Exception')
 
   })
+
+
+
+
 })
