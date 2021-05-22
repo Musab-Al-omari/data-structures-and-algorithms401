@@ -22,7 +22,7 @@ describe('Linked List', () => {
     let ll = new linkedList()
     ll.append('first')
     ll.append('second')
-    console.log(ll.head);
+
     expect(ll.head.value).toEqual('first')
     expect(ll.head.next).toEqual({ value: 'second', next: null })
 
@@ -81,6 +81,39 @@ describe('Linked List', () => {
     expect(ll.kthFromEnd(3)).toEqual('Exception')
 
   })
+
+  it('function to reverse a Singly Linked List ', () => {
+    let ll = new linkedList()
+    ll.append('a')
+    ll.append('b')
+    ll.append('c')
+    let newLinkedList = ll.reverse()
+    expect(newLinkedList.value).toEqual('c')
+    expect(newLinkedList.next.value).toEqual('b')
+    expect(newLinkedList.next.next.value).toEqual('a')
+      // expect().toEqual('Exception')
+
+  })
+  it('Linked list is palindrome ', () => {
+    let ll = new linkedList()
+    ll.append('b')
+    ll.append('a')
+    ll.append('b')
+
+    let firstLL = ll.palindrome()
+
+    // ll.append('a')
+    // let secondLL = ll.palindrome()
+
+    expect(firstLL).toEqual(true)
+      // expect(secondLL).toEqual(true)
+  })
+
+
+
+
+
+
 
 
 
