@@ -63,13 +63,6 @@ class linkedList {
       currentNode = currentNode.next
     }
   }
-  print() {
-    let currentNode = this.head
-    while (currentNode) {
-      console.log(currentNode.value);
-      currentNode = currentNode.next
-    }
-  }
 
 
   insertBefore(value, newVal) {
@@ -101,9 +94,6 @@ class linkedList {
 
     }
   }
-
-
-
 
 
   includes(value) {
@@ -154,16 +144,47 @@ class linkedList {
 
   }
 
+
+  reverse() {
+    let currentNode = this.head
+    let previous = null
+    let saved = null
+    while (currentNode) {
+      saved = currentNode.next
+      currentNode.next = previous
+      previous = currentNode
+      currentNode = saved
+    }
+    // console.log(previous);
+    return previous
+  }
+
+  print() {
+    let currentNode = this.head
+      // console.log(currentNode);
+    while (currentNode) {
+      currentNode = currentNode.next
+    }
+  }
+
+  palindrome() {
+    let currentNode = this.head
+    let array = []
+    while (currentNode) {
+      array.push(currentNode.value)
+      currentNode = currentNode.next
+    }
+    // [5, 6, 9, 6, 5]
+    // if (array.length % 2 != 0) { return false }
+    console.log(Math.floor(array.length / 2));
+    for (let i = 0; i < Math.floor(array.length / 2); i++) {
+      if (array[i] !== array[array.length - i - 1]) { return false }
+    }
+    return true
+  }
 }
-let ll = new linkedList()
-ll.append('a')
-ll.append('b')
-ll.append('c')
-console.log(ll.kthFromEnd(2));
-// ll.print()
 
-
-
+// let ll = new linkedList()
 
 
 
