@@ -8,4 +8,5 @@
 | array shift  | [click here](challenges/arrayShift/readme.md) |
 | BinarySearch | [click here](challenges/arrayBinarySearch/readme.md) |
 | linkedList | [click here](challenges/linkedList/readme.md) |
+| fifoAnimalShelter | [click here](challenges/fifoAnimalShelter/readme.md) |
 
