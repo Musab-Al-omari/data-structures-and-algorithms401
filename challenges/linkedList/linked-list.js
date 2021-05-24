@@ -146,6 +146,7 @@ class linkedList {
 
 
   reverse() {
+
     let currentNode = this.head
     let previous = null
     let saved = null
