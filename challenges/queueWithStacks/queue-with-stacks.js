@@ -1,3 +1,6 @@
+// let Stack = require('../stacksAndQueues/stacks-and-queues').Stack
+
+
 class Queue {
   constructor() {
     this.pushStack = new Stack();
@@ -68,3 +71,4 @@ class Stack {
     return temp;
   }
 }
+module.exports = Queue
