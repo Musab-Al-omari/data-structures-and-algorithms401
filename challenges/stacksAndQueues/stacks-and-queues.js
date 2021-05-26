@@ -4,6 +4,7 @@
 class Node {
   constructor(value) {
     this.value = value
+    this.next = null
 
   }
 }
@@ -58,7 +59,9 @@ class Queue {
         this.front = null
         return this.MyQueue.shift()
       }
-      return this.MyQueue.shift()
+      let x = this.MyQueue.shift()
+      this.front = this.MyQueue[0]
+      return x
     }
     this.front = null
     return 'exception'
