@@ -10,4 +10,5 @@
 | linkedList | [click here](challenges/linkedList/readme.md) |
 | fifoAnimalShelter | [click here](challenges/fifoAnimalShelter/readme.md) |
 | queueWithStacks | [click here](challenges/queueWithStacks/readme.md) |
+| multiBracketValidation | [click here](challenges/multiBracketValidation/readme.md) |
 

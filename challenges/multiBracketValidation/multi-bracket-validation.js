@@ -52,9 +52,10 @@
 
 // }
 
-// يا دوب فاهم الحل 
-var isValid = function(string) {
-  // let inputSplit = string.split('')
+
+
+const multiBracketValidation = function(string) {
+
 
   let regex = /[\(\)\{\}\[\]]/g;
   let input = string.match(regex)
@@ -78,10 +79,37 @@ var isValid = function(string) {
 
   return stack.length == 0;
 };
-console.log(isValid('{([{[]})}'));
+
+
+// var isValid = function(s) {
+//   const stack = []
+//   for (let i = 0; i < s.length; i++) {
+//     if (s[i] === "(") stack.push(")")
+//     else if (s[i] === "[") stack.push("]")
+//     else if (s[i] === "{") stack.push("}")
+//     else if (stack.pop() !== s[i]) return false
+//   }
+//   return stack.length === 0
+// };
+// console.log(isValid('{a}()'));
 
 
 
+// function randV() {
+//   return Math.floor(Math.random() * (10 + 15 + 1) - 15)
+// }
+// let render = 0
+// let sum = 0;
+// for (let i = 0; i <= 30; i++) {
+//   render = randV()
+
+//   if (render >= 0) {
+
+//     sum = sum + render
+//       // console.log(sum);
+//   }
+// }
+// console.log(sum);
 
 
 
@@ -125,4 +153,4 @@ console.log(isValid('{([{[]})}'));
 // }
 // console.log(multiBracketValidation('12412()'));
 
-// module.exports = multiBracketValidation
+module.exports = multiBracketValidation
