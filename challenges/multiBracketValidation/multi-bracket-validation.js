@@ -71,7 +71,7 @@ const multiBracketValidation = function(string) {
       stack.push(input[i]);
       continue;
     }
-    console.log(i, input[i]);
+
     if (stack.pop() != m[input[i]]) {
       return false;
     }
