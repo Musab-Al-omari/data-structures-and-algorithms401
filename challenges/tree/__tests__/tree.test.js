@@ -52,6 +52,15 @@ describe('Binary Tree', () => {
     // console.log("postOrderResult: ", postOrderResult)
     expect(postOrderResult).toEqual(expected);
   });
+  it('it find the max value ', () => {
+
+
+    // console.log("postOrderResult: ", postOrderResult)
+    expect(tree.findMaximumValue()).toEqual(9);
+  });
+
+
+
 });
 
 describe('BinarySearchTree', () => {

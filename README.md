@@ -11,4 +11,5 @@
 | fifoAnimalShelter | [click here](challenges/fifoAnimalShelter/readme.md) |
 | queueWithStacks | [click here](challenges/queueWithStacks/readme.md) |
 | multiBracketValidation | [click here](challenges/multiBracketValidation/readme.md) |
+| maxValueOfBT | [click here](challenges/tree/readme.md) |
 

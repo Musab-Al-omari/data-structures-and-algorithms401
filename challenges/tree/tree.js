@@ -51,6 +51,27 @@ class BinaryTree {
     traverse(this.root);
     return results;
   }
+  findMaximumValue() {
+    let array = []
+
+    const traverse = node => {
+      array.push(node.value)
+      if (node.left) { traverse(node.left) }
+      if (node.right) { traverse(node.right) }
+    }
+    traverse(this.root);
+    // console.log('array', array);
+    let j = array[0];
+    for (let i = 0; i < array.length; i++) {
+      if (array[i] > j) {
+        j = array[i]
+      }
+      // if (array[i] < j & j == 0) {
+      //   j = array[i]
+      // }
+    }
+    return j
+  }
 }
 
 
