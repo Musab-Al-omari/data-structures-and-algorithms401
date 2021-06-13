@@ -73,20 +73,45 @@ class BinaryTree {
     return j
   }
 
-  BinaryTree() {
-    let result = [];
-    let queue = [];
-    queue.push(this.root);
+  // BinaryTree() {
+  //   let result = [];
+  //   let queue = [];
+  //   queue.push(this.root);
+  //   while (queue.length) {
+  //     let currentNode = queue.shift()
+  //     result.push(currentNode.value)
+  //     if (currentNode.left) {
+  //       queue.push(currentNode.left)
+  //     }
+  //   }
+  //   return result
+  // }
+
+  bfs() {
+    let result = []
+    let queue = []
+
+    queue.push(this.root)
+
     while (queue.length) {
       let currentNode = queue.shift()
+
       result.push(currentNode.value)
+
       if (currentNode.left) {
         queue.push(currentNode.left)
       }
+      if (currentNode.right) {
+        queue.push(currentNode.right)
+      }
     }
+
     return result
   }
 }
+
+
+
 
 
 class BinarySearchTree {
@@ -398,3 +423,29 @@ module.exports = {
 //     return result
 //   }
 // }
+
+
+
+
+
+
+var twoSum = function(nums, target) {
+
+  let index = [];
+  for (let i = 0; i < nums.length; i++) {
+    for (let s = 0; s < nums.length; s++) {
+      if (s === 0 & i === 0) { continue }
+      if (nums[i] + nums[i + s] === target) {
+        index.push(i)
+        index.push(i + s)
+        return index
+      }
+
+    }
+
+  }
+}
+
+6
+
+console.log(twoSum([3, 2, 3], 6));
