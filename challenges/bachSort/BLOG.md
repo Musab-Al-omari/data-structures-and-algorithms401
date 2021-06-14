@@ -6,7 +6,7 @@ to understand  bach for and if statements  and how to sort an array inside the b
 ## Approach & Efficiency
 to rewrite the same code in javascript
 
-
+hello
 ## Solution
 ![](../assets/bachSort.jpeg)
 
