@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1623610636774" clover="3.2.0">
-  <project timestamp="1623610636774" name="All files">
-    <metrics statements="325" coveredstatements="291" conditionals="108" coveredconditionals="90" methods="57" coveredmethods="53" elements="490" coveredelements="434" complexity="0" loc="325" ncloc="325" packages="8" files="8" classes="8"/>
+<coverage generated="1624037011467" clover="3.2.0">
+  <project timestamp="1624037011468" name="All files">
+    <metrics statements="368" coveredstatements="333" conditionals="120" coveredconditionals="102" methods="69" coveredmethods="65" elements="557" coveredelements="500" complexity="0" loc="368" ncloc="368" packages="9" files="9" classes="9"/>
     <package name="bachSort">
       <metrics statements="11" coveredstatements="11" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
       <file name="bachSort.js" path="/home/musab/ltuc/401/data-structures-and-algorithms401/challenges/bachSort/bachSort.js">
@@ -93,6 +93,55 @@
         <line num="70" count="1" type="stmt"/>
         <line num="72" count="1" type="stmt"/>
         <line num="73" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="hashtable">
+      <metrics statements="43" coveredstatements="42" conditionals="12" coveredconditionals="12" methods="12" coveredmethods="12"/>
+      <file name="hashtable.js" path="/home/musab/ltuc/401/data-structures-and-algorithms401/challenges/hashtable/hashtable.js">
+        <metrics statements="43" coveredstatements="42" conditionals="12" coveredconditionals="12" methods="12" coveredmethods="12"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="17" count="5" type="stmt"/>
+        <line num="18" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="19" count="3" type="stmt"/>
+        <line num="21" count="2" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="25" count="2" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="31" count="2" type="stmt"/>
+        <line num="32" count="2" type="stmt"/>
+        <line num="33" count="4" type="stmt"/>
+        <line num="34" count="4" type="stmt"/>
+        <line num="36" count="2" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
+        <line num="49" count="9" type="stmt"/>
+        <line num="51" count="45" type="stmt"/>
+        <line num="54" count="9" type="stmt"/>
+        <line num="56" count="9" type="stmt"/>
+        <line num="61" count="5" type="stmt"/>
+        <line num="63" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="64" count="3" type="stmt"/>
+        <line num="66" count="5" type="stmt"/>
+        <line num="71" count="2" type="stmt"/>
+        <line num="72" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="73" count="1" type="stmt"/>
+        <line num="75" count="1" type="stmt"/>
+        <line num="76" count="1" type="stmt"/>
+        <line num="77" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="78" count="1" type="stmt"/>
+        <line num="81" count="1" type="stmt"/>
+        <line num="86" count="2" type="stmt"/>
+        <line num="87" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="88" count="1" type="stmt"/>
+        <line num="91" count="1" type="stmt"/>
+        <line num="92" count="1" type="stmt"/>
+        <line num="93" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="94" count="1" type="stmt"/>
+        <line num="97" count="1" type="stmt"/>
+        <line num="105" count="1" type="stmt"/>
       </file>
     </package>
     <package name="linkedList">
