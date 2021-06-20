@@ -51,7 +51,7 @@ class Hashtable {
             return acc + v.charCodeAt(0)
         }, 0);
 
-        console.log("sum : ", sum);
+        // console.log("sum : ", sum);
 
         return (sum * 19) % this.size;
     }
