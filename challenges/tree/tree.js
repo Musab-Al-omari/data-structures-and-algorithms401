@@ -51,6 +51,9 @@ class BinaryTree {
     traverse(this.root);
     return results;
   }
+
+
+  
   findMaximumValue() {
     let array = []
 
