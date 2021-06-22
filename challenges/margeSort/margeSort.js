@@ -4,8 +4,6 @@ function mergeSort(arr) {
       let mid = Math.floor(n / 2);
       let left = arr.slice(0, mid);
       let right = arr.slice(mid);
-      console.log(left);
-      console.log(right);
       mergeSort(left);
       mergeSort(right);
       merge(left, right, arr);
