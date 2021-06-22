@@ -47,7 +47,7 @@ class Hashtable {
     hash(key) {
 
         const sum = key.split('').reduce((acc, v) => {
-            
+
             return acc + v.charCodeAt(0)
         }, 0);
 
@@ -56,14 +56,14 @@ class Hashtable {
         return (sum * 19) % this.size;
     }
 
-    set(key, value) {
-      
+    add(key, value) {
+
         const hashedIndex = this.hash(key);
 
         if (!this.table[hashedIndex]) {
             this.table[hashedIndex] = new LinkedList();
         }
-        this.table[hashedIndex].add({ [key]: value }); // store anything other than the object
+        this.table[hashedIndex].add([key, value]); // store anything other than the object
     }
 
 
@@ -72,34 +72,52 @@ class Hashtable {
         if (!this.table[hashedIndex]) {
             return false
         }
-        let flag=false
-         this.table[hashedIndex].getValues().forEach((obj)=>{
-             if (Object.keys(obj)[0]===key) {
-                 flag=true
-             }
-         })
-         return flag
+        let flag = false
+        this.table[hashedIndex].getValues().forEach((obj) => {
+            if (Object.keys(obj)[0] === key) {
+                flag = true
+            }
+        })
+        return flag
     }
 
 
-    get(key){
+    get(key) {
         const hashedIndex = this.hash(key);
         if (!this.table[hashedIndex]) {
             return 'the key not assign here'
         }
 
-      let flag='the key not assign here'
-         this.table[hashedIndex].getValues().forEach((obj)=>{
-             if (Object.keys(obj)[0]===key) {
-                flag= Object.values(obj)[0]
-             }
-         })
-         return flag
-
-
+        let flag = 'the key not assign here'
+        this.table[hashedIndex].getValues().forEach((obj) => {
+            if (Object.keys(obj)[0] === key) {
+                flag = Object.values(obj)[0]
+            }
+        })
+        return flag
     }
+
+
+    keysValues() {
+        // declare an empty array for the keys
+        const keys = [];
+        // console.log( this.table);
+        // iterate over the data array (I call a single array a "bucket")
+        for (let i = 0; i < this.table.length; i++) {
+            if (this.table[i]) {
+                keys.push(this.table[i].root.value)
+
+            }
+
+        }
+        return keys;
+    }
+
+
+
+
 }
 
 
 
-module.exports=Hashtable;
+module.exports = Hashtable;

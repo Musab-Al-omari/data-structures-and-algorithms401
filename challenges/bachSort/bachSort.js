@@ -16,6 +16,6 @@ function bachSort(array){
 
 }
 
-console.log(bachSort([3,6,4,5]));
+// console.log(bachSort([3,6,4,5]));
 
 module.exports=bachSort

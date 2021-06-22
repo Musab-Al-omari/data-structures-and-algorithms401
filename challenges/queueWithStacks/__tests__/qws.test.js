@@ -8,7 +8,7 @@ describe('PseudoQueue class.', () => {
     rr.enqueue(5)
     rr.enqueue(6)
     rr.enqueue(7)
-    console.log(rr);
+    // console.log(rr);
     expect(rr.size).toEqual(3)
 
   })
@@ -18,7 +18,7 @@ describe('PseudoQueue class.', () => {
     rr.enqueue(6)
     rr.enqueue(7)
     rr.dequeue()
-    console.log(rr);
+    // console.log(rr);
     expect(rr.size).toEqual(2)
   })
 })
