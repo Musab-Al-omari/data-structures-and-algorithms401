@@ -7,7 +7,7 @@ describe('animal shelter', () => {
     let hh = new AnimalShelter();
     hh.enqueue('cat')
 
-    console.log(hh.cats[0]);
+   
     expect(hh.cats[0]).toEqual('cat')
 
   })

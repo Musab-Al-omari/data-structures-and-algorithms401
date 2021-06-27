@@ -18,5 +18,4 @@ let reverseArray = (array) => {
 
 let x=reverseArray(arr)
 let y=reverseArray(arr1)
-console.log(x);
-console.log(y);
+

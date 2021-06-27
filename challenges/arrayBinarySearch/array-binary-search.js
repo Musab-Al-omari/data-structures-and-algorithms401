@@ -22,4 +22,3 @@ function BinarySearch(sortedArray, searchKey) {
 }
 let a = [1, 2, 3, 4, 15, 20, 30, 40, 56, 77]
 let b = 56
-console.log(BinarySearch(a, b));
