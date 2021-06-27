@@ -33,7 +33,7 @@ class AnimalShelter {
 
       if (this.dogs.length != 0) {
         let outerDog = this.dogs.shift()
-        console.log("after", this.dogs);
+       
         return outerDog
       }
       return 'no dogs here'

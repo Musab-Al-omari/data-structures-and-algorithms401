@@ -70,4 +70,3 @@ node11.children = [node33, node34]
 node13.children = [node35]
 
 let Tree = new kTree(node1)
-console.log(fizzBuzzTree(Tree));

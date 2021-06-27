@@ -22,7 +22,7 @@ function insertShiftArray(arr, val) {
         }
     }
 
-    console.log(arr);
+  
 
 }
 insertShiftArray(array, value)
