@@ -46,8 +46,8 @@ class Graph {
     getSize() {
         return this.adjacencyList.size
     }
+    
     breadthFirst(vertex) {
-        // const result = []
         const visited = new Set()
         let queue = []
         queue.push(vertex)
